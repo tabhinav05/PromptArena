@@ -4,7 +4,7 @@ export async function streamLLMs(
   onAnthropic: (text: string, status: string) => void
 ) {
   try {
-    const response = await fetch('http://localhost:4000/stream', {
+    const response = await fetch('https://promptarena-backend.onrender.com/stream', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ prompt }),

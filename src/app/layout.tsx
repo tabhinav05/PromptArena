@@ -1,7 +1,7 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'AI Showdown',
+  title: 'PromptArena',
   description: 'Compare AI responses',
 };
 

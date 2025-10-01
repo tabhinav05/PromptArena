@@ -22,7 +22,7 @@ export function LandingScreen({
           </div>
           
           <h1 className="text-6xl font-bold text-white mb-4">
-            AI Showdown
+             Prompt Arena
           </h1>
           
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
