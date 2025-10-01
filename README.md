@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PrompArena
+
+Compare responses from OpenAI and Anthropic side-by-side in real-time.
+
+## Live Demo
+
+- **Frontend**: https://prompt-arena-5x3rdq2xp-tabhinav6s-projects.vercel.app/
+- **Backend**: https://promptarena-backend.onrender.com/
+
+## What it does
+
+Send a prompt to both GPT-4o-mini and Claude Haiku at the same time, and watch their responses appear live. Simple comparison tool to see how different AI models respond to the same question.
+
+## Tech Stack
+
+- **Backend**: NestJS with OpenAI and Anthropic SDKs
+- **Frontend**: Next.js 14 with TypeScript
+- **Styling**: Tailwind CSS
 
 ## Getting Started
 
-First, run the development server:
+### Backend Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd backend
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Create a `.env` file:
+```
+OPENAI_API_KEY=your_key_here
+ANTHROPIC_API_KEY=your_key_here
+PORT=4000
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Start the server:
+```bash
+npm run start:dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Frontend Setup
 
-## Learn More
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+That's it! Open http://localhost:3000 in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Use
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Type your question in the input box
+2. Hit Enter or click "Start Comparison"
+3. Watch both AIs respond in real-time
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Getting API Keys
+
+- **OpenAI**: Sign up at platform.openai.com and create an API key
+- **Anthropic**: Sign up at console.anthropic.com and create an API key
+
+
+## Notes
+
+- This is a demo project, not production-ready
+- No database - responses aren't saved
+- Both models stream responses at the same time
+- Works best on desktop browsers
+
+---
